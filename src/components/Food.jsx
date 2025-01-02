@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
-import {categories,data} from '../data/data.js'
+import {data} from '../data/data.js'
 const Food = () => {
     // console.log(data);
     const [Foods, setFoods]=useState(data)
     // filter type burgers/pizza/etc
-    const filterType=(categories)=>{
+    const filterType=(category)=>{
         setFoods(
             data.filter((item)=>{
-                return item.category===categories;
+                return item.category===category;
             })
         );
     };
